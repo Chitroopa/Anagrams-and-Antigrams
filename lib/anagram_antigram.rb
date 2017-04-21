@@ -31,4 +31,21 @@ class String
 
     result
   end
+
+  # function to count common letter in both words
+  define_method(:letter_match_count) do |second_word|
+    word_one = self.split("").uniq()
+    word_two = second_word.split("").uniq()
+    match_counter = 0
+
+    word_one.each() do |letter|
+      if word_two.include?(letter)
+        match_counter = match_counter + 1
+      end
+    end
+binding.pry
+    match_counter
+  end
+
+
 end

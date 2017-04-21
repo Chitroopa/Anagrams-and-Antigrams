@@ -11,6 +11,11 @@ describe('String#anagram_antigram') do
   it('return common letter count') do
     expect('ruby'.letter_match_count('bury')).to(eq(4))
   end
-
+  it('Check if the inputs are actual words') do
+    expect('ruby'.anagram_antigram('thrs')).to(eq("You need to input actual words!"))
+  end
+  it('Check if two words are anagrams') do
+    expect('ruby'.anagram_antigram('bury')).to(eq("These words are anagrams."))
+  end
 
 end

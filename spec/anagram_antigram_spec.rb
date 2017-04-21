@@ -17,5 +17,8 @@ describe('String#anagram_antigram') do
   it('Check if two words are anagrams') do
     expect('ruby'.anagram_antigram('bury')).to(eq("These words are anagrams."))
   end
+  it('Check if two words are anagrams irrespective of difference case') do
+    expect('Tea'.anagram_antigram('Eat')).to(eq("These words are anagrams."))
+  end
 
 end

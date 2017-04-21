@@ -47,10 +47,13 @@ class String
   end
 
   # main function anagram_antigram
-  define_method(:anagram_antigram) do |second_word|
+  define_method(:anagram_antigram) do |word|
     output_message = ""
-    if self.is_word?(second_word)
-       if self.letter_match_count(second_word) > 0 && self.length == second_word.length
+    first_word = self.downcase()
+    second_word = word.downcase()
+    if first_word.is_word?(second_word)
+       if first_word.letter_match_count(second_word) > 0 && first_word.length == second_word.length
+# binding.pry
          output_message = "These words are anagrams."
        end
 

@@ -15,14 +15,15 @@ describe('String#anagram_antigram') do
   it('return false if inputted string has no actual words') do
     expect('thrs ruby'.has_actual_word?()).to(eq(false))
   end
-  
+
 # Test case for main function
-  it('return true if inputted string has actual word') do
-    expect('ruby has lot of gmrs'.anagram_antigram("gems has lot of ruby")).to(eq("You need to input actual words!"))
-  end
 
   it('Check if the inputs are actual words') do
     expect('ruby'.anagram_antigram('thrs')).to(eq("You need to input actual words!"))
+  end
+
+  it('Check if inputted string has actual word') do
+    expect('ruby has lot of gmrs'.anagram_antigram("gems has lot of ruby")).to(eq("You need to input actual words!"))
   end
 
   it('Check if two words are anagrams') do

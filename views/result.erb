@@ -1,4 +1,9 @@
 <h2>You have entered <span class="output-style"><%= @first_string%></span> and <span class="output-style"><%= @second_string%></span> </h2>
-<div class="jumbotron">
+<br>
+<h4>Result</h4>
+<div class="jumbotron" id='result'>
   <h4><%= @output_message%></h4>
 </div>
+<form action="/">
+  <button type="submit" class="btn bg-button">Try again</button>
+</form>

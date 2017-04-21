@@ -1,4 +1,3 @@
-require('pry')
 class String
   # function to check if single word is actual word
   # A word must contain a vowel (a, i, e, o, u) or y. Otherwise it's not a word
@@ -49,22 +48,23 @@ class String
   end
 
   # function to count common letter in both words
-  define_method(:letter_match_count) do |second_word|
+  define_method(:letter_match) do |second_word|
     word_one = self.split("")
     word_two = second_word.split("")
-    match_counter = 0
+    match_letters = []
 
     word_one.each() do |letter|
       if word_two.include?(letter)
-        match_counter = match_counter + 1
+        match_letters.push(letter)
+
       end
     end
-    match_counter
+    match_letters
   end
 
   # main function anagram_antigram
   # calls has_actual_word sub function to check for actual words
-  # calls letter_match_count sub function to get matched letters count 
+  # calls letter_match_count sub function to get matched letters count
   define_method(:anagram_antigram) do |second_string|
     output_message = ""
 
@@ -74,7 +74,11 @@ class String
 
     if self.downcase().has_actual_word? && second_string.downcase().has_actual_word?
 
-      word_match_counter = first_word_formatted.letter_match_count(second_word_formatted)
+      letters_match_uniq = first_word_formatted.letter_match(second_word_formatted).uniq()
+      letter_uniq_match = letters_match_uniq.length
+
+      word_match_counter = first_word_formatted.letter_match(second_word_formatted).length
+
       if first_word_formatted.length == second_word_formatted.length && (word_match_counter > 0 && word_match_counter == first_word_formatted.length)
           output_message = "These words are anagrams."
           if first_word_formatted == second_word_formatted.reverse()
@@ -82,10 +86,11 @@ class String
           end
       elsif word_match_counter == 0
         output_message = "These words have no letter matches and are antigrams."
+      elsif word_match_counter > 0
+        output_message = "These words aren't anagrams but ".concat(letter_uniq_match.to_s).concat(" letters match: ").concat(letters_match_uniq.join(","))
       else
         output_message = "These words are not anagrams or antigrams"
       end
-
     else
       output_message = "You need to input actual words!"
     end

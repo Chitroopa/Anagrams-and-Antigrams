@@ -1,0 +1,41 @@
+body {
+  background: white;
+  font-family: sans-serif;
+  color: #107896;
+  font-size: 20px;
+}
+.output-style {
+  font-style: italic;
+  color: #C02F1D;
+}
+.h1-style {
+  font-family: cursive;
+  text-align: center;
+  color: white;
+}
+.jumbotorn-style, .bg-button{
+  background-color: #107896;
+  color: white;
+}
+#result {
+  color: #107896;
+  background: lightyellow;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 35px;
+}
+.heading {
+  color: #C02F1D;
+  font-style: italic;
+}
+.col-border {
+  padding-top: 20px;
+  border: 1px solid #107896;
+  height: 400px;
+}
+p {
+  font-style: italic;
+}
+.border {
+  border: 15px solid #107896;
+}

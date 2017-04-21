@@ -9,7 +9,7 @@ describe('String#anagram_antigram') do
   end
 
   it('return common letter count') do
-    expect('ruby'.letter_match_count('bury')).to(eq(4))
+    expect('ruby'.letter_match('bury')).to(eq(["r","u","b","y"]))
   end
 
   it('return false if inputted string has no actual words') do
@@ -44,7 +44,7 @@ describe('String#anagram_antigram') do
   end
 
   it('Check if two words are anagrams or antigrams') do
-    expect('ruby'.anagram_antigram('brry')).to(eq("These words are not anagrams or antigrams"))
+    expect('ruby'.anagram_antigram('brry')).to(eq("These words aren't anagrams but 3 letters match: r,b,y"))
   end
 
   it('Check for multiple words being anagrams or antigrams') do

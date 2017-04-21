@@ -1,11 +1,58 @@
-<form  action='/result'>
-  <div class="form-group">
-    <label for="first-string">Enter a word or sentence</label>
-    <input id="first-string" name="first-string" type="text">
+<p>Please fill the below information and check if your words for Anagram, Antigram or Palindrome</p>
+<div class="jumbotron">
+  <form  action='/result'>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="first-string">Enter a word or sentence</label>
+        </div>
+          <input id="first-string" name="first-string" type="text" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="second-string">Enter another word or sentence</label>
+        </div>
+          <input id="second-string" name="second-string" type="text" required>
+      </div>
+    </div>
+    <button type="submit" class="btn bg-button">Check!</button>
+  </form>
+</div>
+<p>Examples</p>
+<div class="jumbotron">
+
+
+  <div class="row">
+    <div class="col-md-4 col-border">
+      <h5 class="heading">Anagrams</h5>
+      <p>An anagram is direct word switch or word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once</p>
+      <ul>
+        <li>The eyes, They see</li>
+        <li>Dormitory, Dirty room</li>
+        <li>Payment received,	Every cent paid me</li>
+      </ul>
+
+    </div>
+    <div class="col-md-4 col-border">
+      <h5 class="heading">Antigrams</h5>
+      <p>A word is an "antigram" of another word if no letters match.</p>
+      <ul>
+        <li>Hi, bye</li>
+        <li>sun, bat</li>
+        <li>white, red</li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-border">
+      <h5 class="heading">Palindrome</h5>
+      <p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward.</p>
+      <ul>
+        <li>kayak</li>
+        <li>Nurses run</li>
+        <li>Never odd or even</li>
+      </ul>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="second-string">Enter another word or sentence</label>
-    <input id="second-string" name="second-string" type="text">
-  </div>
-  <button type="submit" class="btn bg-primary">Check!</button>
-</form>
+</div>
+<div class="border"></div>

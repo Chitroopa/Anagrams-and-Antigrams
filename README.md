@@ -1,26 +1,25 @@
 # _Anagrams and Antigrams_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Ruby,Independent project 1, 04/21/2017_
 
-#### By _**{List of contributors}**_
+#### By _**Chitroopa Manikkavasagam**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This application takes two string as input and checks if its is Anagram, Antigram or palindrome._
+_Two words are anagrams if they contain the exact same letters in a different order. For example, "ruby" and "bury" are anagrams because they contain the same letters._
 
-## Setup/Installation Requirements
+1. _Check if two words are anagrams. If they are, your method should return something like this: "These words are anagrams."_
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+2. _Account for the possibility that words might have different cases but should still be anagrams. For instance, "Tea" is still an anagram of "Eat"._
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+3. _If a word or phrase is an anagram, check if it's also a palindrome. The method should return something like: "These words are palindromes."_
 
-## Known Bugs
+4. _Add a rule to check if the inputs are words. Words can only be anagrams or anagrams if they are, in fact, actually words. (For instance, "yurb" isn't an anagram of "ruby"    because "yurb" isn't a real word.) A word must contain a vowel (a, i, e, o, u) or y. Otherwise it's not a word. If one of the inputs has no vowels, your method should return something like this: "You need to input actual words!"_
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+5. _If phrases aren't anagrams, the method should check whether they are actually "antigrams." For our purposes, a word is an "antigram" of another word if no letters match. For example, "hi" has no matches with "bye". The method should return something like this if there are no letter matches: "These words have no letter matches and are antigrams."_
+
+6. _Account for multiple words being anagrams or "antigrams." Spaces and punctuation shouldn't count (so they should be removed). You'll need to make sure that each word in the inputted phrases is really a word (passing condition #4 above). You may want to use a regular expression to remove additional characters._
 
 ## Specifications
 | Description | Input | Output |
@@ -32,17 +31,28 @@ _{Are there issues that have not yet been resolved that you want to let users kn
 | If the inputted words aren't anagrams, check for antigrams | hi, bye | These words have no letter matches and are antigrams.|
 | Check multiple words being anagrams or antigrams | A telephone girl, Repeating "Hello" | These words are anagrams.|
 | Check if inputted string has actual words | ruby has lot of gmrs, gems has lot of ruby| You need to input actual words!|
+| If two phrases aren't anagrams, return how many letters from the argument are actual matches with the receiver  | bun, gun| These words aren't anagrams but 2 letters match: u,n|
 
-## Support and contact details
+## Setup/Installation Requirements
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+* _This project is deployed in Heroku. Check out to access the application_
+* _Clone this repository_
+* _Give $bundle command to install all required gems_
+* _This application uses Sinatra server, give $ ruby app.rb_
+* _Open your browser, type http://localhost:4567 and hit enter_
+
+## Known Bugs
+
+_NA_
+
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_Ruby,HTML,CSS_
+_Ruby gems : Sinatra,pry,capybara_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2017 **_Chitroopa Manikkavasagam_**

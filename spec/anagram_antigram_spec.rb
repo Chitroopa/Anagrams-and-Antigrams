@@ -8,7 +8,7 @@ describe('String#anagram_antigram') do
     expect('ruby'.is_word?()).to(eq(true))
   end
 
-  it('return common letter count') do
+  it('return array of match letter') do
     expect('ruby'.letter_match('bury')).to(eq(["r","u","b","y"]))
   end
 
@@ -17,7 +17,6 @@ describe('String#anagram_antigram') do
   end
 
 # Test case for main function
-
   it('Check if the inputs are actual words') do
     expect('ruby'.anagram_antigram('thrs')).to(eq("You need to input actual words!"))
   end
@@ -43,12 +42,11 @@ describe('String#anagram_antigram') do
     expect('Hi'.anagram_antigram('bye')).to(eq("These words have no letter matches and are antigrams."))
   end
 
-  it('Check if two words are anagrams or antigrams') do
+  it('If two words arent anagrams return the match letters') do
     expect('ruby'.anagram_antigram('brry')).to(eq("These words aren't anagrams but 3 letters match: r,b,y"))
   end
 
   it('Check for multiple words being anagrams or antigrams') do
     expect('A telephone girl'.anagram_antigram('Repeating "Hello"')).to(eq("These words are anagrams."))
   end
-
 end

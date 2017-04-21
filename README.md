@@ -35,10 +35,10 @@ _Two words are anagrams if they contain the exact same letters in a different or
 
 ## Setup/Installation Requirements
 
-* _This project is deployed in Heroku. Check out to access the application_
+* _This project is deployed in Heroku https://anagrams-antigrams.herokuapp.com/ or follow the below steps_
 * _Clone this repository_
-* _Give $bundle command to install all required gems_
-* _This application uses Sinatra server, give $ ruby app.rb_
+* _Give $ bundle command to install all required gems_
+* _This application uses Sinatra server, give $ ruby app.rb to start the server_
 * _Open your browser, type http://localhost:4567 and hit enter_
 
 ## Known Bugs
@@ -49,6 +49,7 @@ _NA_
 ## Technologies Used
 
 _Ruby,HTML,CSS_
+
 _Ruby gems : Sinatra,pry,capybara_
 
 ### License

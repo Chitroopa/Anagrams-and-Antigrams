@@ -27,11 +27,11 @@ _{Are there issues that have not yet been resolved that you want to let users kn
 |-------------|-------|--------|
 | Check if the inputs are actual words| ruby, thrs | You need to input actual words! |
 | Check if two words are anagrams | ruby, bury | These words are anagrams. |
-| Check if two words are anagrams irrespective of difference case| Tea, Eat | These words are anagrams. |
+| Check if two words are anagrams irrespective of different case| Tea, Eat | These words are anagrams. |
 | If the inputted words are anagrams, check for palindrome | madam, madam | These words are palindromes.|
 | If the inputted words aren't anagrams, check for antigrams | hi, bye | These words have no letter matches and are antigrams.|
 | Check multiple words being anagrams or antigrams | A telephone girl, Repeating "Hello" | These words are anagrams.|
-| Check if inputted string has actual word | ruby has lot of gmrs, gems has lot of ruby| You need to input actual words!|
+| Check if inputted string has actual words | ruby has lot of gmrs, gems has lot of ruby| You need to input actual words!|
 
 ## Support and contact details
 
